@@ -278,6 +278,12 @@
       $.error('Invalid Sidr Source');
     }
 
+    $('#' + name).find('a').each(function() {
+      $(this).click(function() {
+        methods.toggle(name);
+      });
+    });
+
     return this.each(function(){
       var $this = $(this),
           data = $this.data('sidr');
